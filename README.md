@@ -14,3 +14,5 @@ Packages
 `user@terminal $: docker-compose up -d`
 
 Update files `.env.development` and `.env.production` and insert **API_KEY** of `openweather`.
+
+Open url `http://localhost:3001` on your browser.
