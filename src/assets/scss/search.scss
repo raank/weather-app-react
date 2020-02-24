@@ -1,0 +1,79 @@
+$color-white: #fff;
+$color-white-opacity: 0.2;
+$form-height: 6vh;
+
+$border-radius: 2vw;
+
+$orange-primary: #f83600;
+$orange-secondary: #fe8c00;
+
+.app-search {
+  &-form {
+    border: 1px solid rgba($color-white, $color-white-opacity);
+    border-radius: $border-radius;
+
+    input, button {
+      height: $form-height;
+      line-height: $form-height;
+      background: transparent;
+      color: rgba($color-white, $color-white-opacity);
+      border: none;
+      outline: none;
+      font-size: 2vw;
+      transition: all 0.3s ease;
+
+      &:hover, &:focus {
+        color: rgba($color-white, 0.6);
+      }
+    }
+  }
+
+  &-results {
+    .weather-item {
+      border: 1px solid rgba($color-white, $color-white-opacity);
+      border-radius: $border-radius;
+
+      &, &-content:after {
+        transition: all 0.3s ease;
+      }
+
+      &:hover, &.active {
+        border-color: transparent;
+        background: rgba(0, 0, 0, $color-white-opacity);
+        cursor: pointer;
+        box-shadow: 0 0 15px rgba(0, 0, 0, $color-white-opacity);
+
+        .weather-item-content:after {
+          width: 100%;
+        }
+      }
+
+      &-header {
+        .wi {
+          font-size: 2.5vw;
+        }
+      }
+
+      &-content {
+        position: relative;
+        span {
+          font-size: 1vw;
+          line-height: 1vw;
+        }
+
+        &:after {
+          content: '';
+          width: 30%;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          height: 3px;
+          box-shadow: 0 0 15px $orange-secondary;
+          background: $orange-primary; /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, $orange-primary, $orange-secondary); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, $orange-primary, $orange-secondary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+      }
+    }
+  }
+}

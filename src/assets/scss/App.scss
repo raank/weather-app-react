@@ -1,0 +1,116 @@
+$color-default: #5E3875;
+
+html, body, body > div, .app {
+  height: 100%;
+  background: $color-default;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.app {
+  text-align: center;
+  background: $color-default;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &-aside {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &-logo {
+      width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-date {
+      position: relative;
+      &, .day, .clock {
+        width: 100%;
+        display: inline-block;
+      }
+
+      span {
+        color: #fff;
+        line-height: 1.5vw;
+        &.day {
+          font-weight: bold;
+          font-size: 1.3vw;
+        }
+
+        &.clock {
+          font-size: 1vw;
+        }
+      }
+    }
+  }
+
+  &-weather {
+    &-header {
+      &-title {
+        font-size: 1.7vw;
+        text-transform: capitalize;
+      }
+
+      &-subtitle {
+        font-size: 1.7vw;
+        font-weight: 700;
+      }
+
+      &-icon {
+        i {
+          font-size: 4vw;
+          color: $color-default;
+        }
+      }
+    }
+    &-infos {
+      background: #fff;
+      border-radius: 10px;
+
+      .app-weather-header {
+        color: #333;
+      }
+
+      &-temperature {
+        &-number {
+          h2 {
+            font-weight: bold;
+            font-size: 5vw;
+          }
+          sup {
+            font-weight: 300;
+          }
+        }
+
+        &-description {
+          color: $color-default;
+          font-weight: 600;
+        }
+      }
+
+      &-list {
+        list-style: none;
+
+        li {
+          font-size: 1.2vw;
+          line-height: 2vw;
+        }
+
+        .data-name {
+          color: lighten($color-default, 5%);
+        }
+
+        .data-attr {
+          color: #888888;
+        }
+      }
+    }
+  }
+}
