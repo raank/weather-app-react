@@ -110,19 +110,13 @@ class AppCurrent extends React.Component
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getForecast: (city) => dispatch(getForecast(city))
-    }
-};
-
 const mapStateToProps = (state) => {
     return {
         list: state.forecast.list,
         current: state.forecast.current,
         city: state.forecast.city,
-        notfound: state.forecast.notfound,
+        errors: state.forecast.erros,
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppCurrent);
+export default connect(mapStateToProps)(AppCurrent);
