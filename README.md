@@ -9,10 +9,18 @@ Packages
 - [redux-logger](https://github.com/LogRocket/redux-logger): loggin redux
 - [react-redux](https://github.com/reduxjs/redux-thunk): working with states
 
-### Install
+### Install using Docker
 
 `user@terminal $: docker-compose up -d`
 
-Update files `.env.development` and `.env.production` and insert **API_KEY** of `openweather`.
-
 Open url `http://localhost:3001` on your browser.
+
+### Install default
+
+- `cp .env.example .env.development`
+- `npm install` - node-13.9.0 or using **nvm** for change version of node.
+- `npm start`
+
+
+#### Observations
+Update files `.env.development` and `.env.production` and insert **API_KEY** of `openweather`.
